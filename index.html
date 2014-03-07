@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Streamline Engineering</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1;
+        color: rgb(100,100,100);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 200;
+      }
+      a {
+        color: rgb(100,100,100);
+      }
+      body > div {
+        border: 1px solid rgb(200,200,200);
+        max-width: 400px;
+        margin: 60px auto;
+        padding: 20px 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Dominic Aiello</h1>
+      <h2>Mechanical Engineer</h2>
+      <h3>Denver, Colorado</h3>
+      <a href="#" title="dom at streamline engineering dot com" data-behavior="email">Email</a>
+    </div>
+
+    <script type="text/javascript">
+      (function() {
+        function modifyhref(el) {
+          var action = 'mailto:';
+          var user = 'dom';
+          var at = '@';
+          var path = 'streamline-engineering.com';
+          el.setAttribute('href', action + user + at + path);
+        };
+        return {
+          init: function() {
+            var el = document.querySelector('a');
+            if( el.dataset.behavior === 'email' ) {
+              el.addEventListener("click", function(){modifyhref(el)}, false);
+            }
+          }
+        }
+      }()).init();
+    </script>
+  </body>
+</html>
