@@ -1,2 +1,2 @@
 # Streamline Engineering
-`$ install node`
+streamline-engineering.com
